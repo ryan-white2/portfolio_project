@@ -1,19 +1,41 @@
-Title: My Pet ID (SQL Portfolio Project)
+# Social Media App
 
-My Pet ID is a database that connects pets to owners along with vet information.
-I have gone through several iterations on how I wanted this to work and I am still working out the small details as I progress in my knowledge of SQL. 
+Ryan White
 
-| Endpoint      | Methods       |Parameters     |
-|---------------|---------------|---------------|
-|/my_pet        |GET, POST, DELETE | <int:pet_id>|
-|/pet_owner     |GET, POST, DELETE | <int:owner_id>|
-|/vet_info      |GET, POST, DELETE | <int:vet_id>|
+## Portfolio Project
 
-1. How did the project design evolve over time?
-I simplified it a bit by taking out an extra table for a second owner. I've been on the road for the majority of theis course and it has been tough following along so i needed to simplify a bit. I think what i have done has been pretty good and i will continue to make it better and take more time to go through the material again and get a better understanding of all the concepts.
+This is a simple social media app with users, posts, photos
 
-2. Did you choose to use an ORM or raw SQL? Why?
-initially i thought about going through the raw SQL route but with time constraints i went with the twitter template and went about it throught the ORM way. As i worked through it i was getting a bit of a better understanding so im glad i went that route.
+### API Reference Table of endpoint paths, methods, parameters
 
-3. What future improvements are in store, if any? 
-I think i will add a second owner table as well as break out the address column into multiple for city, state, zip instead of having it all on one line. Also adding an UPDATE method. I will continue to work on my project and make it better while submitting the variations on github to help track progress. 
+| Name         | endpoint paths      | methods | parameters       |
+| ------------ | ------------------- | ------- | ---------------- |
+| get_users    | `/users`            | GET     | None             |
+| get_user     | `/users/account_id` | GET     | <int:account_id> |
+| create_user  | `/users`            | POST    | <int:account_id> |
+| update_user  | `/users/account_id` | PUT     | <int:account_id> |
+| delete_user  | `/users/account_id` | DELETE  | <int:account_id> |
+| get_posts    | `/posts`            | GET     | None             |
+| get_post     | `/posts/post_id`    | GET     | <int:post_id>    |
+| create_post  | `/posts`            | POST    | <int:post_id>    |
+| update_post  | `/posts/post_id`    | PUT     | <int:post_id>    |
+| delete_post  | `/posts/post_id`    | DELETE  | <int:post_id>    |
+| get_photos   | `/photos`           | GET     | None             |
+| get_photo    | `/photos/photo_id`  | GET     | <int:photo_id>   |
+| create_photo | `/photos`           | POST    | <int:photo_id>   |
+| update_photo | `/photos/photo_id`  | PUT     | <int:photo_id>   |
+| delete_photo | `/photos/photo_id`  | DELETE  | <int:photo_id>   |
+
+## Retrospective answering of the following questions:
+
+#### **How did the project's design evolve over time?**
+
+I had to consolidate the user account and login tables into one table for simplicity.
+
+#### **Did you choose to use an ORM or raw SQL? Why?**
+
+I used ORM with Flask and SQLalchemy because I wanted more experience with that.
+
+#### **What future improvements are in store, if any?**
+
+It would be good to implement a like and unlike functionality.
