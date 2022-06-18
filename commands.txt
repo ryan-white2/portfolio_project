@@ -1,0 +1,17 @@
+# venv
+python3 -m venv venv
+. venv/bin/activate
+python3 -m pip install --upgrade pip==21.1.2
+python3 -m pip install -r requirements.txt
+pip list
+
+docker exec pg_container psql -c 'CREATE DATABASE pp_ryan_white;'
+
+docker exec -it pg_container psql
+\c pp_ryan_white
+\dt
+
+flask db migrate
+flask db upgrade
+
+python3 seed.py
