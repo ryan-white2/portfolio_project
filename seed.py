@@ -7,8 +7,8 @@ import string
 import hashlib
 import secrets
 from faker import Faker
-from .src.models import User, Post, Photo, db, user_friends_table
-from .src import create_app
+from src.models import User, Post, Photo, db, user_friends_table
+from src import create_app
 
 USER_COUNT = 10
 POST_COUNT = 20
