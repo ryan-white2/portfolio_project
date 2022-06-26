@@ -8,7 +8,7 @@ def test_new_user():
     THEN check the email, hashed_password, and role fields are defined correctly
     """
     test_user = User('Reynaldo Blanco', 'rb@gmail.com', 6501234567, 'Mexico', 'M',
-                     'Spanish', '0', '1999-03-31', 99, '1999-01-01 06:04:02 UTC', 'rblanco', 'P@$$w0rd123')
+                     'Spanish', '0', '1999-03-31', 99, 'rblanco', 'P@$$w0rd123')
     assert test_user.account_name == 'Reynaldo Blanco'
     assert test_user.account_email == 'rb@gmail.com'
     assert test_user.account_phone == 6501234567
